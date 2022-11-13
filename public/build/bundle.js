@@ -18894,12 +18894,12 @@ var app = (function () {
     			t5 = space();
     			hr = element("hr");
     			set_style(h1, "text-align", "center");
-    			add_location(h1, file, 497, 8, 15602);
+    			add_location(h1, file, 497, 8, 15608);
     			set_style(h2, "text-align", "center");
-    			add_location(h2, file, 498, 8, 15659);
+    			add_location(h2, file, 498, 8, 15665);
     			set_style(h5, "text-align", "center");
-    			add_location(h5, file, 499, 8, 15715);
-    			add_location(hr, file, 500, 8, 15785);
+    			add_location(h5, file, 499, 8, 15721);
+    			add_location(hr, file, 500, 8, 15791);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h1, anchor);
@@ -19140,7 +19140,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "Widget Placeholder";
-    			add_location(p, file, 492, 0, 15535);
+    			add_location(p, file, 492, 0, 15541);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -19743,9 +19743,9 @@ var app = (function () {
     			div = element("div");
     			p = element("p");
     			p.textContent = "Loading....";
-    			add_location(p, file, 504, 0, 15832);
+    			add_location(p, file, 504, 0, 15838);
     			attr_dev(div, "class", "startup");
-    			add_location(div, file, 503, 0, 15810);
+    			add_location(div, file, 503, 0, 15816);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -19919,7 +19919,7 @@ var app = (function () {
     	let blacklist = [];
     	let apiaddress = "";
     	let apikey = "";
-    	let awapiaddress = "s4eapi.smarter4ever.com/";
+    	let awapiaddress = "s4eawapi.smarter4ever.com/";
     	let awapikey = "";
     	let synconstart = false;
     	let onlaunch = false;
@@ -20038,7 +20038,7 @@ var app = (function () {
     		console.log("⌚️=> Sync Trackable configuration");
 
     		// sync
-    		const res = await fetch("https://s4eapi.smarter4ever.com/awsettrackable", {
+    		const res = await fetch("https://s4eawapi.smarter4ever.com/awsettrackable", {
     			method: 'POST',
     			body: JSON.stringify({
     				"api_key": awapikey,
@@ -20062,7 +20062,7 @@ var app = (function () {
     			"s4eapi_url": apiaddress
     		};
 
-    		const res = await fetch("https://s4eapi.smarter4ever.com/awsets4eapi", {
+    		const res = await fetch("https://s4eawapi.smarter4ever.com/awsets4eapi", {
     			method: 'POST',
     			body: JSON.stringify(payload),
     			headers: { "content-type": "application/json" }

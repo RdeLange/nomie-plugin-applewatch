@@ -182,7 +182,7 @@ function showMain(){
  async function pushS4EAPI(){
   var encoded = btoa(apikey).toString('base64');
   const payload = {"api_key": awapikey,"s4eapi_key": encoded,"s4eapi_url":apiaddress};
-  const res = await fetch("https://s4eapi.smarter4ever.com/awsets4eapi", {
+  const res = await fetch("https://s4eawapi.smarter4ever.com/awsets4eapi", {
 			method: 'POST',
       body: JSON.stringify(payload),
       headers: { "content-type": "application/json"}
