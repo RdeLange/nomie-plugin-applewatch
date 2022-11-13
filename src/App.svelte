@@ -48,7 +48,7 @@
   let blacklist = [];
   let apiaddress = "";
   let apikey ="";
-  let awapiaddress ="s4eapi.smarter4ever.com/";
+  let awapiaddress ="s4eawapi.smarter4ever.com/";
   let awapikey = "";
   let synconstart = false;
   let onlaunch = false;
@@ -165,7 +165,7 @@ function showMain(){
 
   // sync
   
-  const res = await fetch("https://s4eapi.smarter4ever.com/awsettrackable", {
+  const res = await fetch("https://s4eawapi.smarter4ever.com/awsettrackable", {
 			method: 'POST',
       body: JSON.stringify({"api_key":awapikey,"trackables":element.detail[3]}),
       headers: { "content-type": "application/json"}
