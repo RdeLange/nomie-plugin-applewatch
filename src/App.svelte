@@ -23,12 +23,13 @@
 
   const pluginname = "Apple Watch Hub";
   const pluginemoji = "⌚️";
+  var parent = "";
   let PreLoadedList = []
   
   const plugin = new NomiePlugin({
         name: pluginname,
         emoji: pluginemoji,
-        description: "Apple Watch Hub Plugin to sync data to Apple Watch Nomie App",
+        description: "Apple Watch Hub Plugin to sync data to Apple Watch App",
         uses: ['selectTrackables', 'searchNotes', 'onLaunch'],
         version: "0.5",
         addToCaptureMenu: true,
@@ -55,6 +56,7 @@
 
   // Load init params
   function loadInitParams() {
+    parent = getParentUrl();
     plugin.onUIOpened(async () => {
       mode = 'modal';
     });
@@ -112,6 +114,25 @@
     else {
       theme = "white"}
  }
+
+ // Get parent
+ function getParentUrl() {
+    var isInIframe = (parent !== window),
+        parentUrl = null;
+
+    var parentfound = null;
+    
+    if (isInIframe) {
+        parentUrl = document.referrer;
+    }
+
+    if (parentUrl.includes("nomie") ) {
+      parentfound = "Nomie"
+    }
+    else {parentfound = "Smarter4Ever"}
+
+    return parentfound;
+}
 
 
 //view main page
@@ -471,7 +492,7 @@ async function onLaunch_SaveSyncSelection(){
 <Theme bind:theme />
 {#if inNomie}
 {#if mode == "modal"}
-<Header company="Nomie6" platformName={pluginname} on:click={showMain}>
+<Header company={parent} platformName={pluginname} on:click={showMain}>
   <svelte:fragment slot="skip-to-content">
     <SkipToContent />
   </svelte:fragment>
@@ -485,7 +506,7 @@ async function onLaunch_SaveSyncSelection(){
 {#if view == "main"}
 <Main pluginname={pluginname} pluginemoji={pluginemoji} {plugin} bind:Selection={selection} bind:CustomList={custom} bind:BlackList={blacklist} on:savetrackables={saveTrackables} on:savesynctrackables={syncTrackables}/>
 {:else if view == "info"}
-<Info pluginname={pluginname} pluginemoji={pluginemoji} on:exitinfo={showMain}/>
+<Info parent={parent} pluginname={pluginname} pluginemoji={pluginemoji} on:exitinfo={showMain}/>
 {:else if view == "settings"}
 <Settings pluginname={pluginname} pluginemoji={pluginemoji} bind:synconstart={synconstart} bind:awapikey={awapikey} bind:apiaddress={apiaddress} bind:apikey={apikey} on:exitsettings={exitSettings} on:savesettings={saveSettings}/>
 {/if}
@@ -497,7 +518,7 @@ async function onLaunch_SaveSyncSelection(){
 {:else if !inNomie}
         <h1 style="text-align:center">{pluginemoji}</h1>
         <h2 style="text-align:center">{pluginname}</h2>
-        <h5 style="text-align:center">This is a plugin for Nomie</h5>
+        <h5 style="text-align:center">This is a plugin for {parent}</h5>
         <hr>
 {/if}
 {#if loading}
