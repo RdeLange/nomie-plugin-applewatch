@@ -508,7 +508,7 @@ async function onLaunch_SaveSyncSelection(){
 {:else if view == "info"}
 <Info parent={parent} pluginname={pluginname} pluginemoji={pluginemoji} on:exitinfo={showMain}/>
 {:else if view == "settings"}
-<Settings pluginname={pluginname} pluginemoji={pluginemoji} bind:synconstart={synconstart} bind:awapikey={awapikey} bind:apiaddress={apiaddress} bind:apikey={apikey} on:exitsettings={exitSettings} on:savesettings={saveSettings}/>
+<Settings pluginname={pluginname} pluginemoji={pluginemoji} parent={parent} bind:synconstart={synconstart} bind:awapikey={awapikey} bind:apiaddress={apiaddress} bind:apikey={apikey} on:exitsettings={exitSettings} on:savesettings={saveSettings}/>
 {/if}
 {:else if mode == "widget"}
 <p>Widget Placeholder</p>

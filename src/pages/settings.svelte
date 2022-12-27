@@ -17,6 +17,7 @@
     export let apikey;
     export let awapikey;
     export let synconstart = false;
+    export let parent;
 
    let open=true;
    
@@ -52,19 +53,19 @@
     <Row>
       <Column>
         <Tile>
-          <p>Configure Nomie API</p>
-          <h5 style="font-size:0.8em; font-weight:300">This section configures the API your Apple Watch will use to log to Nomie. You can find the API address and key in the Nomie API settings section</h5>
+          <p>Configure {parent} API</p>
+          <h5 style="font-size:0.8em; font-weight:300">This section configures the API your Apple Watch will use to log to {parent}. You can find the API address and key in the {parent} API settings section</h5>
           <br>
           <TextInput bind:value={apiaddress} size="sm" inline labelText="API address" placeholder="Leave empty for default.." />
-          <TextInput bind:value={apikey} size="sm" inline labelText="API key" placeholder="Enter the Nomie API key" />
+          <TextInput bind:value={apikey} size="sm" inline labelText="API key" placeholder="Enter the {parent} API key" />
           <br>
-          <p>Configure Nomie Apple Watch API</p>
-          <h5 style="font-size:0.8em; font-weight:300">This section configures the API the plugin will use to conect to your Apple Watch Nomie App. You can find the API key in the Nomie Apple Watch App</h5>
+          <p>Configure {parent} Apple Watch API</p>
+          <h5 style="font-size:0.8em; font-weight:300">This section configures the API the plugin will use to conect to your Apple Watch {parent} App. You can find the API key in the {parent} Apple Watch App</h5>
           <br>
-          <TextInput bind:value={awapikey} size="sm" inline labelText="AW API key" placeholder="Enter AW Nomie App API key" />
+          <TextInput bind:value={awapikey} size="sm" inline labelText="AW API key" placeholder="Enter AW {parent}App API key" />
           <br>
-          <p>Sync at Nomie Start</p>
-          <h5 style="font-size:0.8em; font-weight:300">Indicate if you would like to sync your Trackable selection each time Nomie starts</h5>
+          <p>Sync at {parent} Start</p>
+          <h5 style="font-size:0.8em; font-weight:300">Indicate if you would like to sync your Trackable selection each time {parent} starts</h5>
           
           <Toggle bind:toggled={synconstart} size="sm" labelText="Sync with AW" hideLabel/>
         </Tile>
