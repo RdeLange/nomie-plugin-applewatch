@@ -98,7 +98,7 @@
       if (loading) {
         inNomie = false;
       }
-    }, 4000);
+    }, 400);
   }
 
   // change theme
