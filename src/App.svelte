@@ -1,6 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   import "carbon-components-svelte/css/all.css";
+  import LibLoader from './components/LibLoadder.svelte';
   import {
     Header,
     HeaderUtilities,
@@ -24,9 +25,11 @@
   const pluginname = "Apple Watch Hub";
   const pluginemoji = "⌚️";
   var parent = "";
-  let PreLoadedList = []
+  let PreLoadedList = [];
+  let plugin;
+  let PlugiAapiUrl = "https://plugins.nomie.app/v1/nomie-plugin.js";
   
-  const plugin = new NomiePlugin({
+  plugin = new NomiePlugin({
         name: pluginname,
         emoji: pluginemoji,
         description: "Apple Watch Hub Plugin to sync data to Apple Watch App",
@@ -480,14 +483,28 @@ async function onLaunch_SaveSyncSelection(){
 
 // ALL ON LAUNCH CODE END
 
-
+function onLoaded() {
+  if (!plugin) {
+  plugin = new NomiePlugin({
+        name: pluginname,
+        emoji: pluginemoji,
+        description: "Apple Watch Hub Plugin to sync data to Apple Watch App",
+        uses: ['selectTrackables', 'searchNotes', 'onLaunch'],
+        version: "0.5",
+        addToCaptureMenu: true,
+        addToMoreMenu: true,
+        addToWidgets: false,
+      })
+  }
+}
 
 
 
 
 </script>
 
-
+<LibLoader url={PlugiAapiUrl}
+on:loaded="{onLoaded}" />
 {#if mode == "modal"  || mode =="widget"}
 <Theme bind:theme />
 {#if inNomie}
