@@ -484,7 +484,10 @@ async function onLaunch_SaveSyncSelection(){
 // ALL ON LAUNCH CODE END
 
 function onLoaded() {
-  if (!plugin) {
+  setTimeout(()=>{
+  if (plugin.prefs == undefined) {
+    window.location.reload()}},2000);
+ /* if (!plugin) {
   plugin = new NomiePlugin({
         name: pluginname,
         emoji: pluginemoji,
@@ -495,7 +498,7 @@ function onLoaded() {
         addToMoreMenu: true,
         addToWidgets: false,
       })
-  }
+  }*/
 }
 
 
