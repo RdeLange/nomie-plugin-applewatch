@@ -26,10 +26,9 @@
   const pluginemoji = "⌚️";
   var parent = "";
   let PreLoadedList = [];
-  let plugin;
   let PlugiAapiUrl = "https://plugins.nomie.app/v1/nomie-plugin.js";
   
-  plugin = new NomiePlugin({
+  const plugin = new NomiePlugin({
         name: pluginname,
         emoji: pluginemoji,
         description: "Apple Watch Hub Plugin to sync data to Apple Watch App",
@@ -78,8 +77,6 @@
     });
 
     plugin.onRegistered(async () => {
-      inNomie = true;
-      loading = false;
       await plugin.storage.init()
       selection= await plugin.storage.getItem('selection') || [];
       custom = await plugin.storage.getItem('custom') || [];
@@ -97,11 +94,10 @@
       else {theme = "g10"} 
     })
 
- //   setTimeout(() => {
- //     if (loading) {
- //       inNomie = false;
- //     }
- //   }, 400);
+ setTimeout(() => {
+      inNomie = true;
+      loading = false;
+    }, 700);
   }
 
   // change theme
@@ -484,9 +480,9 @@ async function onLaunch_SaveSyncSelection(){
 // ALL ON LAUNCH CODE END
 
 function onLoaded() {
-  setTimeout(()=>{
-  if (plugin.prefs == undefined) {
-    window.location.reload()}},2000);
+//  setTimeout(()=>{
+//  if (plugin.prefs == undefined) {
+//    window.location.reload()}},2000);
  /* if (!plugin) {
   plugin = new NomiePlugin({
         name: pluginname,
