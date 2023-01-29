@@ -14,6 +14,7 @@
     export let pluginname;
     export let pluginemoji;
     export let apiaddress;
+    export let awapiaddress;
     export let apikey;
     export let awapikey;
     export let synconstart = false;
@@ -62,6 +63,7 @@
           <p>Configure {parent} Apple Watch API</p>
           <h5 style="font-size:0.8em; font-weight:300">This section configures the API the plugin will use to conect to your Apple Watch {parent} App. You can find the API key in the {parent} Apple Watch App</h5>
           <br>
+          <TextInput bind:value={awapiaddress} size="sm" inline labelText="AW API domain" placeholder="Leave empty for default.." />
           <TextInput bind:value={awapikey} size="sm" inline labelText="AW API key" placeholder="Enter AW {parent}App API key" />
           <br>
           <p>Sync at {parent} Start</p>

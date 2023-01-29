@@ -22,11 +22,11 @@
   import Information from "carbon-icons-svelte/lib/Information.svelte";
   import nid from "./modules/nid/nid";
 
-  const pluginname = "Apple Watch Hub";
+  const pluginname = "Nomie Apple Watch";
   const pluginemoji = "⌚️";
   var parent = "";
   let PreLoadedList = [];
-  let PlugiAapiUrl = "https://plugins.nomie.app/v1/nomie-plugin.js";
+  let PlugiAapiUrl = "https://cdn.jsdelivr.net/gh/open-nomie/plugins/bin/v1/nomie-plugin.js";
   
   const plugin = new NomiePlugin({
         name: pluginname,
@@ -51,7 +51,8 @@
   let blacklist = [];
   let apiaddress = "";
   let apikey ="";
-  let awapiaddress ="s4eawapi.smarter4ever.com/";
+  let awapiaddress ="";
+  //let awapiaddress ="awapi.dailynomie.com/";
   let awapikey = "";
   let synconstart = false;
   let onlaunch = false;
@@ -81,8 +82,9 @@
       selection= await plugin.storage.getItem('selection') || [];
       custom = await plugin.storage.getItem('custom') || [];
       blacklist = await plugin.storage.getItem('blacklist') || [];
-      apiaddress = await plugin.storage.getItem('apiaddress') || "https://6.nomie.app/api/capture";
+      apiaddress = await plugin.storage.getItem('apiaddress') || "https://api.dailynomie.com/log";
       apikey = await plugin.storage.getItem('apikey') || "";
+      awapiaddress = await plugin.storage.getItem('awapiaddress') || "https://awapi.dailynomie.com";
       awapikey = await plugin.storage.getItem('awapikey') || "";
       synconstart = await plugin.storage.getItem('synconstart') || false;
       
@@ -155,6 +157,7 @@ function showMain(){
  function saveSettings(){
   plugin.storage.setItem('apiaddress', apiaddress);
   plugin.storage.setItem('apikey', apikey);
+  plugin.storage.setItem('awapiaddress', awapiaddress);
   plugin.storage.setItem('awapikey', awapikey);
   plugin.storage.setItem('synconstart', synconstart);
   
@@ -164,6 +167,7 @@ function showMain(){
  async function exitSettings(){
   apiaddress = await plugin.storage.getItem('apiaddress') || "";
       apikey = await plugin.storage.getItem('apikey') || "";
+      awapiaddress = await plugin.storage.getItem('awapiaddress') || "";
       awapikey = await plugin.storage.getItem('awapikey') || "";
       synconstart = await plugin.storage.getItem('synconstart') || false; 
   showMain();
@@ -184,8 +188,8 @@ function showMain(){
   console.log("⌚️=> Sync Trackable configuration")
 
   // sync
-  
-  const res = await fetch("https://s4eawapi.smarter4ever.com/awsettrackable", {
+  var fullawapiaddress = awapiaddress+"/awsettrackable";
+  const res = await fetch(fullawapiaddress, {
 			method: 'POST',
       body: JSON.stringify({"api_key":awapikey,"trackables":element.detail[3]}),
       headers: { "content-type": "application/json"}
@@ -200,9 +204,10 @@ function showMain(){
  }
 
  async function pushS4EAPI(){
+  var fullawapiaddress = awapiaddress+"/awsets4eapi";
   var encoded = btoa(apikey).toString('base64');
   const payload = {"api_key": awapikey,"s4eapi_key": encoded,"s4eapi_url":apiaddress};
-  const res = await fetch("https://s4eawapi.smarter4ever.com/awsets4eapi", {
+  const res = await fetch(fullawapiaddress, {
 			method: 'POST',
       body: JSON.stringify(payload),
       headers: { "content-type": "application/json"}
@@ -524,7 +529,7 @@ on:loaded="{onLoaded}" />
 {:else if view == "info"}
 <Info parent={parent} pluginname={pluginname} pluginemoji={pluginemoji} on:exitinfo={showMain}/>
 {:else if view == "settings"}
-<Settings pluginname={pluginname} pluginemoji={pluginemoji} parent={parent} bind:synconstart={synconstart} bind:awapikey={awapikey} bind:apiaddress={apiaddress} bind:apikey={apikey} on:exitsettings={exitSettings} on:savesettings={saveSettings}/>
+<Settings pluginname={pluginname} pluginemoji={pluginemoji} parent={parent} bind:synconstart={synconstart} bind:awapikey={awapikey} bind:apiaddress={apiaddress} bind:awapiaddress={awapiaddress} bind:apikey={apikey} on:exitsettings={exitSettings} on:savesettings={saveSettings}/>
 {/if}
 {:else if mode == "widget"}
 <p>Widget Placeholder</p>
