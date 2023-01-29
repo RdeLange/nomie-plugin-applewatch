@@ -157,7 +157,7 @@ Enter the settings menu by clicking on the settings button at the top menu of th
 
 You will be directed to the following screen:
 
-![](assets/20230129_222101_image.png)
+![](assets/20230129_224823_image.png)
 
 Here you can configure the following items:
 
