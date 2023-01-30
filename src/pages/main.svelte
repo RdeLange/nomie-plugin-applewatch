@@ -463,6 +463,8 @@ async function updateBlackList(){
 
 </Tile>
         </Column>
+        </Row>
+        <Row>
         <Column>
           <h6 style="font-weight:300;font-size:85%;padding-bottom:8px">Custom Trackables</h6>
          
@@ -516,10 +518,10 @@ async function updateBlackList(){
      <br>
     <Row>
       <Column>
-        <Button icon={Save} style="width:100%" on:click={()=>{SaveSelection()}}>Save Only</Button>
+        <Button icon={Save} style="width:100%" on:click={()=>{SaveSelection()}}>Save</Button>
       </Column>
       <Column>
-        <Button icon={Repeat} style="width:100%" on:click={()=>{SaveSyncSelection()}}>Save & Sync</Button>
+        <Button icon={Repeat} style="width:100%" on:click={()=>{SaveSyncSelection()}}>Save&Sync</Button>
       </Column>
     </Row>
     </Grid>

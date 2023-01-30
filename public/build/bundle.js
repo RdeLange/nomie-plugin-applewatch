@@ -13592,7 +13592,7 @@ var app = (function () {
     }
 
     // (435:8) <Column>
-    function create_default_slot_21(ctx) {
+    function create_default_slot_22(ctx) {
     	let h1;
     	let t0;
     	let t1;
@@ -13652,7 +13652,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_21.name,
+    		id: create_default_slot_22.name,
     		type: "slot",
     		source: "(435:8) <Column>",
     		ctx
@@ -13662,13 +13662,13 @@ var app = (function () {
     }
 
     // (434:6) <Row>
-    function create_default_slot_20(ctx) {
+    function create_default_slot_21(ctx) {
     	let column;
     	let current;
 
     	column = new Column({
     			props: {
-    				$$slots: { default: [create_default_slot_21] },
+    				$$slots: { default: [create_default_slot_22] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -13707,7 +13707,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_20.name,
+    		id: create_default_slot_21.name,
     		type: "slot",
     		source: "(434:6) <Row>",
     		ctx
@@ -13717,7 +13717,7 @@ var app = (function () {
     }
 
     // (444:10) <Select   labelText="Discovered Trackables"   size="sm"   selected={Selection}   on:change={(e) => changeDiscoverySelection(e.detail)} >
-    function create_default_slot_19(ctx) {
+    function create_default_slot_20(ctx) {
     	let selectitem0;
     	let t0;
     	let selectitem1;
@@ -13796,7 +13796,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_19.name,
+    		id: create_default_slot_20.name,
     		type: "slot",
     		source: "(444:10) <Select   labelText=\\\"Discovered Trackables\\\"   size=\\\"sm\\\"   selected={Selection}   on:change={(e) => changeDiscoverySelection(e.detail)} >",
     		ctx
@@ -13947,7 +13947,7 @@ var app = (function () {
     }
 
     // (455:0) <Tile>
-    function create_default_slot_18(ctx) {
+    function create_default_slot_19(ctx) {
     	let if_block_anchor;
 
     	function select_block_type(ctx, dirty) {
@@ -13988,7 +13988,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_18.name,
+    		id: create_default_slot_19.name,
     		type: "slot",
     		source: "(455:0) <Tile>",
     		ctx
@@ -13998,7 +13998,7 @@ var app = (function () {
     }
 
     // (443:8) <Column>
-    function create_default_slot_17(ctx) {
+    function create_default_slot_18(ctx) {
     	let select;
     	let t;
     	let tile;
@@ -14009,7 +14009,7 @@ var app = (function () {
     				labelText: "Discovered Trackables",
     				size: "sm",
     				selected: /*Selection*/ ctx[0],
-    				$$slots: { default: [create_default_slot_19] },
+    				$$slots: { default: [create_default_slot_20] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -14019,7 +14019,7 @@ var app = (function () {
 
     	tile = new Tile({
     			props: {
-    				$$slots: { default: [create_default_slot_18] },
+    				$$slots: { default: [create_default_slot_19] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -14074,7 +14074,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_17.name,
+    		id: create_default_slot_18.name,
     		type: "slot",
     		source: "(443:8) <Column>",
     		ctx
@@ -14083,7 +14083,62 @@ var app = (function () {
     	return block;
     }
 
-    // (469:10) <Button style="width:49%" icon={Add} size="small" kind="tertiary" on:click={()=>{addTrackables()}}>
+    // (442:6) <Row>
+    function create_default_slot_17(ctx) {
+    	let column;
+    	let current;
+
+    	column = new Column({
+    			props: {
+    				$$slots: { default: [create_default_slot_18] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	const block = {
+    		c: function create() {
+    			create_component(column.$$.fragment);
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(column, target, anchor);
+    			current = true;
+    		},
+    		p: function update(ctx, dirty) {
+    			const column_changes = {};
+
+    			if (dirty[0] & /*PreLoadedList, Selection*/ 33 | dirty[1] & /*$$scope*/ 1024) {
+    				column_changes.$$scope = { dirty, ctx };
+    			}
+
+    			column.$set(column_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(column.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(column.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(column, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot_17.name,
+    		type: "slot",
+    		source: "(442:6) <Row>",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (471:10) <Button style="width:49%" icon={Add} size="small" kind="tertiary" on:click={()=>{addTrackables()}}>
     function create_default_slot_16(ctx) {
     	let t;
 
@@ -14103,14 +14158,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_16.name,
     		type: "slot",
-    		source: "(469:10) <Button style=\\\"width:49%\\\" icon={Add} size=\\\"small\\\" kind=\\\"tertiary\\\" on:click={()=>{addTrackables()}}>",
+    		source: "(471:10) <Button style=\\\"width:49%\\\" icon={Add} size=\\\"small\\\" kind=\\\"tertiary\\\" on:click={()=>{addTrackables()}}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (471:12) <Button style="width:49%" icon={Add} size="small" kind="tertiary" on:click={()=>{addPersons()}}>
+    // (473:12) <Button style="width:49%" icon={Add} size="small" kind="tertiary" on:click={()=>{addPersons()}}>
     function create_default_slot_15(ctx) {
     	let t;
 
@@ -14130,14 +14185,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_15.name,
     		type: "slot",
-    		source: "(471:12) <Button style=\\\"width:49%\\\" icon={Add} size=\\\"small\\\" kind=\\\"tertiary\\\" on:click={()=>{addPersons()}}>",
+    		source: "(473:12) <Button style=\\\"width:49%\\\" icon={Add} size=\\\"small\\\" kind=\\\"tertiary\\\" on:click={()=>{addPersons()}}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (486:6) {:else}
+    // (488:6) {:else}
     function create_else_block_1(ctx) {
     	let p;
 
@@ -14145,7 +14200,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "∅ No Trackables";
-    			add_location(p, file$6, 486, 6, 15811);
+    			add_location(p, file$6, 488, 6, 15840);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -14162,14 +14217,14 @@ var app = (function () {
     		block,
     		id: create_else_block_1.name,
     		type: "else",
-    		source: "(486:6) {:else}",
+    		source: "(488:6) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (474:10) {#if CustomList.length > 0}
+    // (476:10) {#if CustomList.length > 0}
     function create_if_block_2$1(ctx) {
     	let sortablelist;
     	let updating_list;
@@ -14244,14 +14299,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2$1.name,
     		type: "if",
-    		source: "(474:10) {#if CustomList.length > 0}",
+    		source: "(476:10) {#if CustomList.length > 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (482:6) {#if refreshed}
+    // (484:6) {#if refreshed}
     function create_if_block_3$1(ctx) {
     	let sortablelistitem;
     	let current;
@@ -14303,14 +14358,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3$1.name,
     		type: "if",
-    		source: "(482:6) {#if refreshed}",
+    		source: "(484:6) {#if refreshed}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (475:10) <SortableList            bind:list={CustomList}            key="id"            on:sort={sortList}           let:item           let:index       >
+    // (477:10) <SortableList            bind:list={CustomList}            key="id"            on:sort={sortList}           let:item           let:index       >
     function create_default_slot_14(ctx) {
     	let if_block_anchor;
     	let current;
@@ -14369,14 +14424,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_14.name,
     		type: "slot",
-    		source: "(475:10) <SortableList            bind:list={CustomList}            key=\\\"id\\\"            on:sort={sortList}           let:item           let:index       >",
+    		source: "(477:10) <SortableList            bind:list={CustomList}            key=\\\"id\\\"            on:sort={sortList}           let:item           let:index       >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (473:8) <Tile>
+    // (475:8) <Tile>
     function create_default_slot_13(ctx) {
     	let current_block_type_index;
     	let if_block;
@@ -14449,14 +14504,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_13.name,
     		type: "slot",
-    		source: "(473:8) <Tile>",
+    		source: "(475:8) <Tile>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (493:10) <Button style="width:49%" icon={Add} size="small" kind="tertiary" on:click={()=>{addTrackablesbl()}}>
+    // (495:10) <Button style="width:49%" icon={Add} size="small" kind="tertiary" on:click={()=>{addTrackablesbl()}}>
     function create_default_slot_12(ctx) {
     	let t;
 
@@ -14476,14 +14531,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_12.name,
     		type: "slot",
-    		source: "(493:10) <Button style=\\\"width:49%\\\" icon={Add} size=\\\"small\\\" kind=\\\"tertiary\\\" on:click={()=>{addTrackablesbl()}}>",
+    		source: "(495:10) <Button style=\\\"width:49%\\\" icon={Add} size=\\\"small\\\" kind=\\\"tertiary\\\" on:click={()=>{addTrackablesbl()}}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (495:12) <Button style="width:49%" icon={Add} size="small" kind="tertiary" on:click={()=>{addPersonsbl()}}>
+    // (497:12) <Button style="width:49%" icon={Add} size="small" kind="tertiary" on:click={()=>{addPersonsbl()}}>
     function create_default_slot_11$1(ctx) {
     	let t;
 
@@ -14503,14 +14558,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_11$1.name,
     		type: "slot",
-    		source: "(495:12) <Button style=\\\"width:49%\\\" icon={Add} size=\\\"small\\\" kind=\\\"tertiary\\\" on:click={()=>{addPersonsbl()}}>",
+    		source: "(497:12) <Button style=\\\"width:49%\\\" icon={Add} size=\\\"small\\\" kind=\\\"tertiary\\\" on:click={()=>{addPersonsbl()}}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (510:6) {:else}
+    // (512:6) {:else}
     function create_else_block(ctx) {
     	let p;
 
@@ -14518,7 +14573,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "∅ No Trackables";
-    			add_location(p, file$6, 510, 6, 16665);
+    			add_location(p, file$6, 512, 6, 16694);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -14535,14 +14590,14 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(510:6) {:else}",
+    		source: "(512:6) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (498:10) {#if BlackList.length > 0}
+    // (500:10) {#if BlackList.length > 0}
     function create_if_block$4(ctx) {
     	let sortablelist;
     	let updating_list;
@@ -14617,14 +14672,14 @@ var app = (function () {
     		block,
     		id: create_if_block$4.name,
     		type: "if",
-    		source: "(498:10) {#if BlackList.length > 0}",
+    		source: "(500:10) {#if BlackList.length > 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (506:6) {#if refreshedbl}
+    // (508:6) {#if refreshedbl}
     function create_if_block_1$1(ctx) {
     	let sortablelistitem;
     	let current;
@@ -14676,14 +14731,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$1.name,
     		type: "if",
-    		source: "(506:6) {#if refreshedbl}",
+    		source: "(508:6) {#if refreshedbl}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (499:10) <SortableList            bind:list={BlackList}            key="id"            on:sort={sortListbl}           let:item           let:index       >
+    // (501:10) <SortableList            bind:list={BlackList}            key="id"            on:sort={sortListbl}           let:item           let:index       >
     function create_default_slot_10$1(ctx) {
     	let if_block_anchor;
     	let current;
@@ -14742,14 +14797,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_10$1.name,
     		type: "slot",
-    		source: "(499:10) <SortableList            bind:list={BlackList}            key=\\\"id\\\"            on:sort={sortListbl}           let:item           let:index       >",
+    		source: "(501:10) <SortableList            bind:list={BlackList}            key=\\\"id\\\"            on:sort={sortListbl}           let:item           let:index       >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (497:8) <Tile style="background:black;color:white">
+    // (499:8) <Tile style="background:black;color:white">
     function create_default_slot_9$1(ctx) {
     	let current_block_type_index;
     	let if_block;
@@ -14822,14 +14877,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_9$1.name,
     		type: "slot",
-    		source: "(497:8) <Tile style=\\\"background:black;color:white\\\">",
+    		source: "(499:8) <Tile style=\\\"background:black;color:white\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (466:8) <Column>
+    // (468:8) <Column>
     function create_default_slot_8$1(ctx) {
     	let h60;
     	let t1;
@@ -14947,12 +15002,12 @@ var app = (function () {
     			set_style(h60, "font-weight", "300");
     			set_style(h60, "font-size", "85%");
     			set_style(h60, "padding-bottom", "8px");
-    			add_location(h60, file$6, 466, 10, 15077);
-    			add_location(br, file$6, 489, 8, 15870);
+    			add_location(h60, file$6, 468, 10, 15106);
+    			add_location(br, file$6, 491, 8, 15899);
     			set_style(h61, "font-weight", "300");
     			set_style(h61, "font-size", "85%");
     			set_style(h61, "padding-bottom", "8px");
-    			add_location(h61, file$6, 490, 8, 15883);
+    			add_location(h61, file$6, 492, 8, 15912);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h60, anchor);
@@ -15062,29 +15117,19 @@ var app = (function () {
     		block,
     		id: create_default_slot_8$1.name,
     		type: "slot",
-    		source: "(466:8) <Column>",
+    		source: "(468:8) <Column>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (442:6) <Row>
+    // (467:8) <Row>
     function create_default_slot_7$1(ctx) {
-    	let column0;
-    	let t;
-    	let column1;
+    	let column;
     	let current;
 
-    	column0 = new Column({
-    			props: {
-    				$$slots: { default: [create_default_slot_17] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
-
-    	column1 = new Column({
+    	column = new Column({
     			props: {
     				$$slots: { default: [create_default_slot_8$1] },
     				$$scope: { ctx }
@@ -15094,47 +15139,32 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			create_component(column0.$$.fragment);
-    			t = space();
-    			create_component(column1.$$.fragment);
+    			create_component(column.$$.fragment);
     		},
     		m: function mount(target, anchor) {
-    			mount_component(column0, target, anchor);
-    			insert_dev(target, t, anchor);
-    			mount_component(column1, target, anchor);
+    			mount_component(column, target, anchor);
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			const column0_changes = {};
-
-    			if (dirty[0] & /*PreLoadedList, Selection*/ 33 | dirty[1] & /*$$scope*/ 1024) {
-    				column0_changes.$$scope = { dirty, ctx };
-    			}
-
-    			column0.$set(column0_changes);
-    			const column1_changes = {};
+    			const column_changes = {};
 
     			if (dirty[0] & /*BlackList, refreshedbl, CustomList, refreshed*/ 198 | dirty[1] & /*$$scope*/ 1024) {
-    				column1_changes.$$scope = { dirty, ctx };
+    				column_changes.$$scope = { dirty, ctx };
     			}
 
-    			column1.$set(column1_changes);
+    			column.$set(column_changes);
     		},
     		i: function intro(local) {
     			if (current) return;
-    			transition_in(column0.$$.fragment, local);
-    			transition_in(column1.$$.fragment, local);
+    			transition_in(column.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
-    			transition_out(column0.$$.fragment, local);
-    			transition_out(column1.$$.fragment, local);
+    			transition_out(column.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			destroy_component(column0, detaching);
-    			if (detaching) detach_dev(t);
-    			destroy_component(column1, detaching);
+    			destroy_component(column, detaching);
     		}
     	};
 
@@ -15142,20 +15172,20 @@ var app = (function () {
     		block,
     		id: create_default_slot_7$1.name,
     		type: "slot",
-    		source: "(442:6) <Row>",
+    		source: "(467:8) <Row>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (519:8) <Button icon={Save} style="width:100%" on:click={()=>{SaveSelection()}}>
+    // (521:8) <Button icon={Save} style="width:100%" on:click={()=>{SaveSelection()}}>
     function create_default_slot_6$2(ctx) {
     	let t;
 
     	const block = {
     		c: function create() {
-    			t = text("Save Only");
+    			t = text("Save");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t, anchor);
@@ -15169,14 +15199,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_6$2.name,
     		type: "slot",
-    		source: "(519:8) <Button icon={Save} style=\\\"width:100%\\\" on:click={()=>{SaveSelection()}}>",
+    		source: "(521:8) <Button icon={Save} style=\\\"width:100%\\\" on:click={()=>{SaveSelection()}}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (518:6) <Column>
+    // (520:6) <Column>
     function create_default_slot_5$2(ctx) {
     	let button;
     	let current;
@@ -15228,20 +15258,20 @@ var app = (function () {
     		block,
     		id: create_default_slot_5$2.name,
     		type: "slot",
-    		source: "(518:6) <Column>",
+    		source: "(520:6) <Column>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (522:8) <Button icon={Repeat} style="width:100%" on:click={()=>{SaveSyncSelection()}}>
+    // (524:8) <Button icon={Repeat} style="width:100%" on:click={()=>{SaveSyncSelection()}}>
     function create_default_slot_4$2(ctx) {
     	let t;
 
     	const block = {
     		c: function create() {
-    			t = text("Save & Sync");
+    			t = text("Save&Sync");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t, anchor);
@@ -15255,14 +15285,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_4$2.name,
     		type: "slot",
-    		source: "(522:8) <Button icon={Repeat} style=\\\"width:100%\\\" on:click={()=>{SaveSyncSelection()}}>",
+    		source: "(524:8) <Button icon={Repeat} style=\\\"width:100%\\\" on:click={()=>{SaveSyncSelection()}}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (521:6) <Column>
+    // (523:6) <Column>
     function create_default_slot_3$2(ctx) {
     	let button;
     	let current;
@@ -15314,14 +15344,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3$2.name,
     		type: "slot",
-    		source: "(521:6) <Column>",
+    		source: "(523:6) <Column>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (517:4) <Row>
+    // (519:4) <Row>
     function create_default_slot_2$2(ctx) {
     	let column0;
     	let t;
@@ -15394,7 +15424,7 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$2.name,
     		type: "slot",
-    		source: "(517:4) <Row>",
+    		source: "(519:4) <Row>",
     		ctx
     	});
 
@@ -15407,14 +15437,16 @@ var app = (function () {
     	let t0;
     	let row1;
     	let t1;
-    	let br;
-    	let t2;
     	let row2;
+    	let t2;
+    	let br;
+    	let t3;
+    	let row3;
     	let current;
 
     	row0 = new Row({
     			props: {
-    				$$slots: { default: [create_default_slot_20] },
+    				$$slots: { default: [create_default_slot_21] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -15422,13 +15454,21 @@ var app = (function () {
 
     	row1 = new Row({
     			props: {
-    				$$slots: { default: [create_default_slot_7$1] },
+    				$$slots: { default: [create_default_slot_17] },
     				$$scope: { ctx }
     			},
     			$$inline: true
     		});
 
     	row2 = new Row({
+    			props: {
+    				$$slots: { default: [create_default_slot_7$1] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	row3 = new Row({
     			props: {
     				$$slots: { default: [create_default_slot_2$2] },
     				$$scope: { ctx }
@@ -15442,19 +15482,23 @@ var app = (function () {
     			t0 = space();
     			create_component(row1.$$.fragment);
     			t1 = space();
-    			br = element("br");
-    			t2 = space();
     			create_component(row2.$$.fragment);
-    			add_location(br, file$6, 515, 5, 16752);
+    			t2 = space();
+    			br = element("br");
+    			t3 = space();
+    			create_component(row3.$$.fragment);
+    			add_location(br, file$6, 517, 5, 16781);
     		},
     		m: function mount(target, anchor) {
     			mount_component(row0, target, anchor);
     			insert_dev(target, t0, anchor);
     			mount_component(row1, target, anchor);
     			insert_dev(target, t1, anchor);
-    			insert_dev(target, br, anchor);
-    			insert_dev(target, t2, anchor);
     			mount_component(row2, target, anchor);
+    			insert_dev(target, t2, anchor);
+    			insert_dev(target, br, anchor);
+    			insert_dev(target, t3, anchor);
+    			mount_component(row3, target, anchor);
     			current = true;
     		},
     		p: function update(ctx, dirty) {
@@ -15467,30 +15511,39 @@ var app = (function () {
     			row0.$set(row0_changes);
     			const row1_changes = {};
 
-    			if (dirty[0] & /*BlackList, refreshedbl, CustomList, refreshed, PreLoadedList, Selection*/ 231 | dirty[1] & /*$$scope*/ 1024) {
+    			if (dirty[0] & /*PreLoadedList, Selection*/ 33 | dirty[1] & /*$$scope*/ 1024) {
     				row1_changes.$$scope = { dirty, ctx };
     			}
 
     			row1.$set(row1_changes);
     			const row2_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 1024) {
+    			if (dirty[0] & /*BlackList, refreshedbl, CustomList, refreshed*/ 198 | dirty[1] & /*$$scope*/ 1024) {
     				row2_changes.$$scope = { dirty, ctx };
     			}
 
     			row2.$set(row2_changes);
+    			const row3_changes = {};
+
+    			if (dirty[1] & /*$$scope*/ 1024) {
+    				row3_changes.$$scope = { dirty, ctx };
+    			}
+
+    			row3.$set(row3_changes);
     		},
     		i: function intro(local) {
     			if (current) return;
     			transition_in(row0.$$.fragment, local);
     			transition_in(row1.$$.fragment, local);
     			transition_in(row2.$$.fragment, local);
+    			transition_in(row3.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
     			transition_out(row0.$$.fragment, local);
     			transition_out(row1.$$.fragment, local);
     			transition_out(row2.$$.fragment, local);
+    			transition_out(row3.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
@@ -15498,9 +15551,11 @@ var app = (function () {
     			if (detaching) detach_dev(t0);
     			destroy_component(row1, detaching);
     			if (detaching) detach_dev(t1);
-    			if (detaching) detach_dev(br);
-    			if (detaching) detach_dev(t2);
     			destroy_component(row2, detaching);
+    			if (detaching) detach_dev(t2);
+    			if (detaching) detach_dev(br);
+    			if (detaching) detach_dev(t3);
+    			destroy_component(row3, detaching);
     		}
     	};
 
