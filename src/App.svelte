@@ -2,6 +2,8 @@
   import { onMount } from 'svelte';
   import "carbon-components-svelte/css/all.css";
   import LibLoader from './components/LibLoadder.svelte';
+  import Toast from './components/toast.svelte'
+  import {notifications} from './components/notifications.js'
   import {
     Header,
     HeaderUtilities,
@@ -162,6 +164,7 @@ function showMain(){
   plugin.storage.setItem('synconstart', synconstart);
   
   showMain();
+  notifications.default('Settings Saved', 3000)
  }
 
  async function exitSettings(){
@@ -173,20 +176,22 @@ function showMain(){
   showMain();
  }
 
- function saveTrackables(element){
+ function saveTrackables(element,notification = true){
   console.log("⌚️=> Save Trackable configuration");
   plugin.storage.setItem('selection', element.detail[0]);
   plugin.storage.setItem('custom', element.detail[1]);
   plugin.storage.setItem('blacklist', element.detail[2]);
+  if (notification) {
+  notifications.default('Saved Only', 3000);}
 
  }
 
  async function syncTrackables(element){
-  saveTrackables(element)
+  saveTrackables(element,false)
   console.log("⌚️=> Sync API Key");
   await pushS4EAPI();
   console.log("⌚️=> Sync Trackable configuration")
-
+  notifications.default('Saved & Synced', 3000)
   // sync
   var fullawapiaddress = awapiaddress+"/awsettrackable";
   const res = await fetch(fullawapiaddress, {
@@ -197,7 +202,7 @@ function showMain(){
       //body: JSON.parse(JSON.stringify({trackables:element.detail[2] ,api_key: awapikey}))
 		})
 		
-		const json = await res.json()
+		//const json = await res.json()
     //const json = res;
 		//const result = JSON.stringify(json)
   //end sync
@@ -547,3 +552,4 @@ on:loaded="{onLoaded}" />
 <p>Loading....</p>
 </div>
 {/if}
+<Toast/>
