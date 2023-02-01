@@ -17972,10 +17972,7 @@ var app = (function () {
     	let t30;
     	let t31;
     	let h52;
-    	let t32;
     	let t33;
-    	let t34;
-    	let t35;
     	let toggle;
     	let updating_toggled;
     	let current;
@@ -18117,10 +18114,8 @@ var app = (function () {
     			t30 = text(" Start");
     			t31 = space();
     			h52 = element("h5");
-    			t32 = text("Indicate if you would like to sync your Trackable selection each time ");
-    			t33 = text(/*parent*/ ctx[7]);
-    			t34 = text(" starts");
-    			t35 = space();
+    			h52.textContent = "Indicate if you would like to automatically sync your Trackable selection regularly in the background";
+    			t33 = space();
     			create_component(toggle.$$.fragment);
     			add_location(p0, file$4, 56, 10, 1147);
     			set_style(h50, "font-size", "0.8em");
@@ -18186,10 +18181,7 @@ var app = (function () {
     			append_dev(p2, t30);
     			insert_dev(target, t31, anchor);
     			insert_dev(target, h52, anchor);
-    			append_dev(h52, t32);
-    			append_dev(h52, t33);
-    			append_dev(h52, t34);
-    			insert_dev(target, t35, anchor);
+    			insert_dev(target, t33, anchor);
     			mount_component(toggle, target, anchor);
     			current = true;
     		},
@@ -18239,7 +18231,6 @@ var app = (function () {
 
     			textinput3.$set(textinput3_changes);
     			if (!current || dirty & /*parent*/ 128) set_data_dev(t29, /*parent*/ ctx[7]);
-    			if (!current || dirty & /*parent*/ 128) set_data_dev(t33, /*parent*/ ctx[7]);
     			const toggle_changes = {};
 
     			if (!updating_toggled && dirty & /*synconstart*/ 1) {
@@ -18295,7 +18286,7 @@ var app = (function () {
     			if (detaching) detach_dev(p2);
     			if (detaching) detach_dev(t31);
     			if (detaching) detach_dev(h52);
-    			if (detaching) detach_dev(t35);
+    			if (detaching) detach_dev(t33);
     			destroy_component(toggle, detaching);
     		}
     	};
@@ -18478,9 +18469,9 @@ var app = (function () {
     			create_component(button.$$.fragment);
     			t1 = space();
     			br1 = element("br");
-    			add_location(br0, file$4, 77, 10, 2594);
-    			add_location(span, file$4, 78, 11, 2610);
-    			add_location(br1, file$4, 79, 11, 2718);
+    			add_location(br0, file$4, 77, 10, 2610);
+    			add_location(span, file$4, 78, 11, 2626);
+    			add_location(br1, file$4, 79, 11, 2734);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, br0, anchor);
@@ -18586,9 +18577,9 @@ var app = (function () {
     			create_component(button.$$.fragment);
     			t1 = space();
     			br1 = element("br");
-    			add_location(br0, file$4, 82, 8, 2760);
-    			add_location(span, file$4, 83, 9, 2774);
-    			add_location(br1, file$4, 84, 9, 2864);
+    			add_location(br0, file$4, 82, 8, 2776);
+    			add_location(span, file$4, 83, 9, 2790);
+    			add_location(br1, file$4, 84, 9, 2880);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, br0, anchor);
@@ -19788,7 +19779,7 @@ var app = (function () {
     const { Object: Object_1, console: console_1 } = globals;
     const file = "src/App.svelte";
 
-    // (544:19) 
+    // (564:19) 
     function create_if_block_8(ctx) {
     	let h1;
     	let t1;
@@ -19814,12 +19805,12 @@ var app = (function () {
     			t6 = space();
     			hr = element("hr");
     			set_style(h1, "text-align", "center");
-    			add_location(h1, file, 544, 8, 17310);
+    			add_location(h1, file, 564, 8, 18330);
     			set_style(h2, "text-align", "center");
-    			add_location(h2, file, 545, 8, 17367);
+    			add_location(h2, file, 565, 8, 18387);
     			set_style(h5, "text-align", "center");
-    			add_location(h5, file, 546, 8, 17423);
-    			add_location(hr, file, 547, 8, 17496);
+    			add_location(h5, file, 566, 8, 18443);
+    			add_location(hr, file, 567, 8, 18516);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h1, anchor);
@@ -19852,14 +19843,14 @@ var app = (function () {
     		block,
     		id: create_if_block_8.name,
     		type: "if",
-    		source: "(544:19) ",
+    		source: "(564:19) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (517:0) {#if mode == "modal"  || mode =="widget"}
+    // (537:0) {#if mode == "modal"  || mode =="widget"}
     function create_if_block_1(ctx) {
     	let theme_1;
     	let updating_theme;
@@ -19952,14 +19943,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(517:0) {#if mode == \\\"modal\\\"  || mode ==\\\"widget\\\"}",
+    		source: "(537:0) {#if mode == \\\"modal\\\"  || mode ==\\\"widget\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (519:0) {#if inNomie}
+    // (539:0) {#if inNomie}
     function create_if_block_2(ctx) {
     	let current_block_type_index;
     	let if_block;
@@ -20049,14 +20040,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(519:0) {#if inNomie}",
+    		source: "(539:0) {#if inNomie}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (539:27) 
+    // (559:27) 
     function create_if_block_7(ctx) {
     	let p;
 
@@ -20064,7 +20055,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "Widget Placeholder";
-    			add_location(p, file, 539, 0, 17243);
+    			add_location(p, file, 559, 0, 18263);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -20081,14 +20072,14 @@ var app = (function () {
     		block,
     		id: create_if_block_7.name,
     		type: "if",
-    		source: "(539:27) ",
+    		source: "(559:27) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (520:0) {#if mode == "modal"}
+    // (540:0) {#if mode == "modal"}
     function create_if_block_3(ctx) {
     	let header;
     	let t;
@@ -20214,14 +20205,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3.name,
     		type: "if",
-    		source: "(520:0) {#if mode == \\\"modal\\\"}",
+    		source: "(540:0) {#if mode == \\\"modal\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (525:2) <HeaderUtilities>
+    // (545:2) <HeaderUtilities>
     function create_default_slot_1(ctx) {
     	let headerglobalaction0;
     	let t0;
@@ -20297,14 +20288,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(525:2) <HeaderUtilities>",
+    		source: "(545:2) <HeaderUtilities>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (521:0) <Header company={parent} platformName={pluginname} on:click={showMain}>
+    // (541:0) <Header company={parent} platformName={pluginname} on:click={showMain}>
     function create_default_slot(ctx) {
     	let headerutilities;
     	let current;
@@ -20352,14 +20343,14 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(521:0) <Header company={parent} platformName={pluginname} on:click={showMain}>",
+    		source: "(541:0) <Header company={parent} platformName={pluginname} on:click={showMain}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (522:2) <svelte:fragment slot="skip-to-content">
+    // (542:2) <svelte:fragment slot="skip-to-content">
     function create_skip_to_content_slot(ctx) {
     	let skiptocontent;
     	let current;
@@ -20391,14 +20382,14 @@ var app = (function () {
     		block,
     		id: create_skip_to_content_slot.name,
     		type: "slot",
-    		source: "(522:2) <svelte:fragment slot=\\\"skip-to-content\\\">",
+    		source: "(542:2) <svelte:fragment slot=\\\"skip-to-content\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (536:29) 
+    // (556:29) 
     function create_if_block_6(ctx) {
     	let settings;
     	let updating_synconstart;
@@ -20525,14 +20516,14 @@ var app = (function () {
     		block,
     		id: create_if_block_6.name,
     		type: "if",
-    		source: "(536:29) ",
+    		source: "(556:29) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (534:25) 
+    // (554:25) 
     function create_if_block_5(ctx) {
     	let info;
     	let current;
@@ -20579,14 +20570,14 @@ var app = (function () {
     		block,
     		id: create_if_block_5.name,
     		type: "if",
-    		source: "(534:25) ",
+    		source: "(554:25) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (532:0) {#if view == "main"}
+    // (552:0) {#if view == "main"}
     function create_if_block_4(ctx) {
     	let main;
     	let updating_Selection;
@@ -20680,14 +20671,14 @@ var app = (function () {
     		block,
     		id: create_if_block_4.name,
     		type: "if",
-    		source: "(532:0) {#if view == \\\"main\\\"}",
+    		source: "(552:0) {#if view == \\\"main\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (550:0) {#if loading}
+    // (570:0) {#if loading}
     function create_if_block(ctx) {
     	let div;
     	let p;
@@ -20697,9 +20688,9 @@ var app = (function () {
     			div = element("div");
     			p = element("p");
     			p.textContent = "Loading....";
-    			add_location(p, file, 551, 0, 17543);
+    			add_location(p, file, 571, 0, 18563);
     			attr_dev(div, "class", "startup");
-    			add_location(div, file, 550, 0, 17521);
+    			add_location(div, file, 570, 0, 18541);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -20714,7 +20705,7 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(550:0) {#if loading}",
+    		source: "(570:0) {#if loading}",
     		ctx
     	});
 
@@ -21100,12 +21091,44 @@ var app = (function () {
     		await onLaunch_changeDiscoverySelection(); //done
     		await onLaunch_updateCustomList();
     		await onLaunch_updateBlackList();
+    		notifications.default('Initial Sync Started', 3000);
 
     		setTimeout(
     			async () => {
     				await onLaunch_SaveSyncSelection();
     			},
     			2000
+    		);
+
+    		// validate every 10mins
+    		setInterval(
+    			async () => {
+    				//reload data
+    				await plugin.storage.init();
+
+    				$$invalidate(6, selection = await plugin.storage.getItem('selection') || []);
+    				$$invalidate(7, custom = await plugin.storage.getItem('custom') || []);
+    				$$invalidate(8, blacklist = await plugin.storage.getItem('blacklist') || []);
+    				$$invalidate(9, apiaddress = await plugin.storage.getItem('apiaddress') || "https://api.dailynomie.com/log");
+    				$$invalidate(10, apikey = await plugin.storage.getItem('apikey') || "");
+    				$$invalidate(11, awapiaddress = await plugin.storage.getItem('awapiaddress') || "https://awapi.dailynomie.com");
+    				$$invalidate(12, awapikey = await plugin.storage.getItem('awapikey') || "");
+    				$$invalidate(13, synconstart = await plugin.storage.getItem('synconstart') || false);
+
+    				//
+    				await onLaunch_changeDiscoverySelection(); //done
+
+    				await onLaunch_updateCustomList();
+    				await onLaunch_updateBlackList();
+
+    				setTimeout(
+    					async () => {
+    						await onLaunch_SaveSyncSelection();
+    					},
+    					2000
+    				);
+    			},
+    			60000
     		);
     	}
 
@@ -21410,7 +21433,9 @@ var app = (function () {
     			detail: [selection, custom, blacklist, CombinedList]
     		};
 
-    		plugin.alert("Apple Watch Synced");
+    		console.log("Apple Watch Synced");
+
+    		//plugin.alert("Apple Watch Synced");
     		await syncTrackables(data);
     	}
 

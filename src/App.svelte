@@ -239,11 +239,22 @@ async function onLaunchStart() {
 
     // validate every 10mins
     setInterval(async ()=>{
+      //reload data
+      await plugin.storage.init()
+      selection= await plugin.storage.getItem('selection') || [];
+      custom = await plugin.storage.getItem('custom') || [];
+      blacklist = await plugin.storage.getItem('blacklist') || [];
+      apiaddress = await plugin.storage.getItem('apiaddress') || "https://api.dailynomie.com/log";
+      apikey = await plugin.storage.getItem('apikey') || "";
+      awapiaddress = await plugin.storage.getItem('awapiaddress') || "https://awapi.dailynomie.com";
+      awapikey = await plugin.storage.getItem('awapikey') || "";
+      synconstart = await plugin.storage.getItem('synconstart') || false;
+      //
       await onLaunch_changeDiscoverySelection(); //done
     await onLaunch_updateCustomList();
     await onLaunch_updateBlackList();
     setTimeout(async ()=>{await onLaunch_SaveSyncSelection()},2000)
-    },600000)
+    },60000)
   }
 
     async function onLaunch_updateCustomList(){
@@ -488,8 +499,8 @@ async function onLaunch_SaveSyncSelection(){
    })
    var data = {detail:[selection,custom,blacklist,CombinedList]}
 
-   
-   plugin.alert("Apple Watch Synced");
+   console.log("Apple Watch Synced")
+   //plugin.alert("Apple Watch Synced");
    await syncTrackables(data)
 }
 
