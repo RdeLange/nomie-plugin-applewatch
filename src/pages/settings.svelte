@@ -67,7 +67,7 @@
           <TextInput bind:value={awapikey} size="sm" inline labelText="AW API key" placeholder="Enter AW {parent}App API key" />
           <br>
           <p>Sync at {parent} Start</p>
-          <h5 style="font-size:0.8em; font-weight:300">Indicate if you would like to sync your Trackable selection each time {parent} starts</h5>
+          <h5 style="font-size:0.8em; font-weight:300">Indicate if you would like to automatically sync your Trackable selection regularly in the background</h5>
           
           <Toggle bind:toggled={synconstart} size="sm" labelText="Sync with AW" hideLabel/>
         </Tile>
