@@ -234,7 +234,16 @@ async function onLaunchStart() {
     await onLaunch_changeDiscoverySelection(); //done
     await onLaunch_updateCustomList();
     await onLaunch_updateBlackList();
+    notifications.default('Initial Sync Started', 3000)
     setTimeout(async ()=>{await onLaunch_SaveSyncSelection()},2000)
+
+    // validate every 10mins
+    setInterval(async ()=>{
+      await onLaunch_changeDiscoverySelection(); //done
+    await onLaunch_updateCustomList();
+    await onLaunch_updateBlackList();
+    setTimeout(async ()=>{await onLaunch_SaveSyncSelection()},2000)
+    },600000)
   }
 
     async function onLaunch_updateCustomList(){
