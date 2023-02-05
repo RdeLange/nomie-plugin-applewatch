@@ -1,7 +1,6 @@
 <script>
   import { onMount } from 'svelte';
   import "carbon-components-svelte/css/all.css";
-  import LibLoader from './components/LibLoadder.svelte';
   import Toast from './components/toast.svelte'
   import {notifications} from './components/notifications.js'
   import {
@@ -509,31 +508,9 @@ async function onLaunch_SaveSyncSelection(){
 
 // ALL ON LAUNCH CODE END
 
-function onLoaded() {
-//  setTimeout(()=>{
-//  if (plugin.prefs == undefined) {
-//    window.location.reload()}},2000);
- /* if (!plugin) {
-  plugin = new NomiePlugin({
-        name: pluginname,
-        emoji: pluginemoji,
-        description: "Apple Watch Hub Plugin to sync data to Apple Watch App",
-        uses: ['selectTrackables', 'searchNotes', 'onLaunch'],
-        version: "0.5",
-        addToCaptureMenu: true,
-        addToMoreMenu: true,
-        addToWidgets: false,
-      })
-  }*/
-}
-
-
-
 
 </script>
 
-<LibLoader url={PlugiAapiUrl}
-on:loaded="{onLoaded}" />
 {#if mode == "modal"  || mode =="widget"}
 <Theme bind:theme />
 {#if inNomie}
