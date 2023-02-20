@@ -124,7 +124,7 @@ I mentioned above that this server is build using Node-Red. I am fully aware tha
 
 More information on the usage of the Apple Watch App can be found at:
 
--TO BE INCLUDED-
+[https://github.com/RdeLange/nomie-applewatch-app](https://github.com/RdeLange/nomie-applewatch-app)
 
 ### The Nomie API Server
 
