@@ -14,7 +14,7 @@ The url of the plugin is:
 
 [https://dailynomie.github.io/nomie-plugin-applewatch/](https://dailynomie.github.io/nomie-plugin-applewatch/)
 
-The ⌚️Nomie 7 Apple Watch Plugin can be installed in Nomie via the following steps:
+The ⌚️Nomie 6 Apple Watch Plugin can be installed in Nomie via the following steps:
 
 * Go to the More Tab
 * Select Plugins
